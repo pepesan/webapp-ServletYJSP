@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <servlet>
+    <servlet-name>Servlet Name For Demo1</servlet-name>
+    <servlet-class>com.cursosdedesarrollo.ServletDemo</servlet-class>
+    <init-param>
+      <param-name>email</param-name>
+      <param-value>admin@email.com</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>Servlet Name For Demo2</servlet-name>
+    <servlet-class>com.cursosdedesarrollo.ServletDemo2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Servlet Name For DemoJSP</servlet-name>
+    <servlet-class>com.cursosdedesarrollo.ServletDemoJSP</servlet-class>
+  </servlet>
+  <context-param>
+    <param-name>email2</param-name>
+    <param-value>admin@email.com</param-value>
+  </context-param>
+  <servlet-mapping>
+    <servlet-name>Servlet Name For Demo1</servlet-name>
+    <url-pattern>/Demo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet Name For Demo2</servlet-name>
+    <url-pattern>/Demo3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet Name For DemoJSP</servlet-name>
+    <url-pattern>/Demo2</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>
+      com.cursosdedesarrollo.MyAppServletContextListener
+    </listener-class>
+  </listener>
+  <session-config>
+    <session-timeout>20</session-timeout>
+  </session-config>
+
+  <listener>
+    <listener-class>com.cursosdedesarrollo.SessionCounterListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.cursosdedesarrollo.MyAttributeListener</listener-class>
+  </listener>
+</web-app>
