@@ -13,8 +13,13 @@ public class ServletDemo2 extends HttpServlet {
             throws IOException {
         PrintWriter out = response.getWriter();
         out.println("<h1>Hello Servlet 2 Get</h1>");
-        String user=request.getAttribute("user").toString();
-        out.println("<h1>User: "+user+"</h1>");
+        if (request.getAttribute("user")!=null){
+            String user=request.getAttribute("user").toString();
+            out.println("<h1>User: "+user+"</h1>");
+        }else{
+            out.println("No user attribute");
+        }
+
 
 
     }
