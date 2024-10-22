@@ -36,7 +36,7 @@ public class ServletDemo extends HttpServlet {
         response.addCookie(cookie);
         session.setAttribute("app","Valor");
         pw.println("Cookies created");
-        out.println("<a href='/Demo2'>Enlace a /Demo2</a>");
+        out.println("<a href='/webapp/Demo2'>Enlace a /Demo2</a>");
         out.println("</body>");
         out.println("</html>");
 
